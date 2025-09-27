@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Start Screen -->
+        <div class="screen active" id="start-screen">
+            <h1>TES PENGETAHUAN UMUM</h1>
+            <p>Uji pengetahuan umum kalian dengan menjawab soal berikut</p>
+            <button id="start-btn">Mulai Kuis</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <h2 id="question-text">Pertanyaan ada di sini</h2>
+                <div class="quiz-info">
+                    <p>
+                        Pertanyaan <span id="current-question">1</span> dari <span id="total-questions">10</span>
+                    </p>
+                    <p>
+                        Nilai: <span id="score">0</span>
+                    </p>
+                </div>
+
+                <!-- Tempat jawaban akan muncul -->
+                <div id="answers-container" class="answer-container"></div>
+
+                <!-- Progress bar -->
+                <div id="progress" class="progress"></div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <h1>Hasil Akhir</h1>
+            <div class="result-info">
+                <p>
+                    Nilai Kamu <span id="final-score">0</span> dari <span id="max-score">0</span>
+                </p>
+                <div id="result-message">Good Job!</div>
+            </div>
+            <button id="restart-btn">Restart Kuis</button>
+            <button id="quit-btn">Quit</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
